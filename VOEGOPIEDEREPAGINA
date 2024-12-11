@@ -1,0 +1,119 @@
+Om een ronddraaiend planeetje rechtsonder op de pagina weer te geven tijdens het laden van een nieuwe pagina, voegen we een universele laadindicator toe. Deze indicator kan worden hergebruikt op elke pagina door gebruik te maken van een eenvoudige JavaScript-functie en CSS-animaties. Hier is hoe dit kan worden bereikt:
+
+---
+
+### **1. Universele Loading Indicator (`index.html` en elke pagina)**
+
+Voeg een laadindicator toe aan de HTML die standaard verborgen is, maar zichtbaar wordt tijdens pagina-overgangen.
+
+```html
+<div class="loading-indicator" id="loadingIndicator">
+  <div class="planet"></div>
+</div>
+```
+
+### **2. CSS: Stijl voor de Loading Indicator**
+
+Creëer een stijl voor de ronddraaiende planeet en positioneer het rechtsonder op de pagina.
+
+```css
+/* Loading Indicator */
+.loading-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.loading-indicator.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.planet {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #1e90ff, #000080);
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.3);
+  position: relative;
+  animation: spin 2s linear infinite;
+}
+
+.planet::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 70px;
+  height: 70px;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: orbit 4s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+```
+
+---
+
+### **3. JavaScript: Functionaliteit voor de Loading Indicator**
+
+Voeg een script toe dat de indicator toont terwijl een nieuwe pagina wordt geladen:
+
+```javascript
+// Globale Loading Indicator
+const loadingIndicator = document.getElementById('loadingIndicator');
+
+// Pagina-navigatie met vertraging
+function navigateTo(page) {
+  // Toon de loading-indicator
+  loadingIndicator.classList.add('active');
+
+  // Simuleer een laadvertraging (bijv. 2 seconden) voordat je navigeert
+  setTimeout(() => {
+    window.location.href = page;
+  }, 2000);
+}
+```
+
+---
+
+### **4. Aanroepen op Alle Pagina's**
+
+Voor consistent gebruik, voeg de `loading-indicator`-HTML en JavaScript-code toe aan een gemeenschappelijke layout of herhaal het op elke pagina. Dit is ideaal voor een project dat gebruik maakt van templates of een gedeeld bestand voor de head/body.
+
+---
+
+### **5. Extra Details voor Gebruikerservaring**
+
+- **Optionele Fade-in/Fade-out:** Je kunt de indicator laten uitfaden nadat de nieuwe pagina is geladen.
+- **Meer Animaties:** Voeg kleine objecten toe rondom de planeet om een "galactisch" effect te creëren, zoals sterretjes die bewegen.
+
+---
+
+Hierdoor krijgt de interface een interactieve en speelse flair, terwijl de laadtijd een esthetische toevoeging krijgt. Laat me weten of je dit verder wilt uitbreiden! 🚀
