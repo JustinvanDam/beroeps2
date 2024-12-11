@@ -3,21 +3,24 @@ body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
-  background: black;
-  color: white;
+  background: #121212; /* Donkergrijze achtergrond */
+  color: #e0e0e0; /* Lichte grijze tekstkleur */
   overflow: hidden;
 }
 
+/* Headerstijl */
 header.header {
   position: absolute;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1rem;
-  color: rgba(200, 200, 200, 0.8);
+  font-size: 1.2rem;
+  color: #e0e0e0;
   text-transform: uppercase;
   z-index: 10;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Lichte gloed */
 }
 
 /* Rasterstructuur */
@@ -29,15 +32,15 @@ header.header {
   height: 100%;
   background: repeating-linear-gradient(
       0deg,
-      rgba(0, 255, 255, 0.1) 0,
-      rgba(0, 255, 255, 0.1) 1px,
+      rgba(255, 255, 255, 0.1) 0,   /* Grijs-witte tint */
+      rgba(255, 255, 255, 0.1) 1px,
       transparent 1px,
       transparent 30px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(0, 255, 255, 0.1) 0,
-      rgba(0, 255, 255, 0.1) 1px,
+      rgba(255, 255, 255, 0.1) 0,
+      rgba(255, 255, 255, 0.1) 1px,
       transparent 1px,
       transparent 30px
     );
@@ -54,9 +57,10 @@ header.header {
   gap: 40px;
 }
 
+/* Menu-item */
 .menu-item {
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid rgba(0, 255, 255, 0.6);
+  background: rgba(25, 25, 25, 0.7); /* Donkergrijze achtergrond */
+  border: 2px solid rgba(255, 255, 255, 0.6);  /* Grijs-witte rand */
   border-radius: 10px;
   padding: 20px;
   width: 300px;
@@ -66,7 +70,7 @@ header.header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #e0e0e0; /* Lichte grijze tekstkleur */
   font-size: 1.2rem;
   position: relative;
   cursor: pointer;
@@ -75,20 +79,20 @@ header.header {
 }
 
 .menu-item:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.5);
+  transform: scale(1.075);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6); /* Witte gloed */
 }
 
 .menu-item h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: rgba(0, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8); /* Witte kleur voor de titel */
 }
 
 .menu-item p {
   margin: 10px 0 0;
   font-size: 0.9rem;
-  color: rgba(200, 200, 200, 0.8);
+  color: rgba(200, 200, 200, 0.8); /* Lichte grijze tekstkleur */
 }
 
 /* Decoratieve lijnen */
@@ -98,7 +102,7 @@ header.header {
   left: -10%;
   width: 120%;
   height: 120%;
-  border: 2px solid rgba(0, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4); /* Lichte grijze rand */
   border-radius: 15px;
   transform: rotate(0deg);
   animation: rotate-decor 6s linear infinite;
@@ -114,18 +118,20 @@ header.header {
   }
 }
 
-/* Bewegende Achtergrond */
+/* Statische ruimteachtergrond */
 .background-animation {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('images/stars-bg.jpg') no-repeat center center/cover;
+  background: url('../images/space.jpg') no-repeat center center/cover;
   z-index: -3;
-  animation: moveBackground 30s linear infinite;
-  filter: brightness(0.4);
+  filter: brightness(0.5); /* Donkere helderheid voor een mysterieus effect */
+  transform: translate3d(0, 0, 0); /* Dit maakt het mogelijk om de achtergrond te bewegen met de muis */
+  transition: transform 0.1s ease-out;
 }
+
 /* Loading Indicator */
 .loading-indicator {
   position: fixed;
@@ -151,8 +157,8 @@ header.header {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #1e90ff, #000080);
-  box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.3);
+  background: radial-gradient(circle at 30% 30%, #b0b0b0, #707070); /* Grijs met lichte metallic tint */
+  box-shadow: 0 0 10px rgba(180, 180, 180, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.3);
   position: relative;
   animation: spin 2s linear infinite;
 }
@@ -185,15 +191,4 @@ header.header {
   to {
     transform: rotate(-360deg);
   }
-}
-
-@keyframes moveBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 200% 200%;
-  }
-
-  
 }

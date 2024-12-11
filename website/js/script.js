@@ -21,4 +21,5 @@ function navigateTo(page) {
   setTimeout(() => {
     window.location.href = page;
   }, 2000);
+
 }
