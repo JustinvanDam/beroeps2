@@ -1,14 +1,14 @@
-/* Algemene stijl */
+
 body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
-  background: #121212; /* Donkergrijze achtergrond */
-  color: #e0e0e0; /* Lichte grijze tekstkleur */
+  background: #121212; 
+  color: #e0e0e0; 
   overflow: hidden;
 }
 
-/* Headerstijl */
+
 header.header {
   position: absolute;
   top: 10px;
@@ -20,10 +20,10 @@ header.header {
   z-index: 10;
   letter-spacing: 2px;
   font-weight: 400;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Lichte gloed */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); 
 }
 
-/* Rasterstructuur */
+
 .grid-overlay {
   position: absolute;
   top: 0;
@@ -32,7 +32,7 @@ header.header {
   height: 100%;
   background: repeating-linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.1) 0,   /* Grijs-witte tint */
+      rgba(255, 255, 255, 0.1) 0,  
       rgba(255, 255, 255, 0.1) 1px,
       transparent 1px,
       transparent 30px
@@ -48,7 +48,7 @@ header.header {
   pointer-events: none;
 }
 
-/* Menu Container */
+
 .menu-container {
   display: flex;
   justify-content: center;
@@ -57,10 +57,10 @@ header.header {
   gap: 40px;
 }
 
-/* Menu-item */
+
 .menu-item {
-  background: rgba(25, 25, 25, 0.7); /* Donkergrijze achtergrond */
-  border: 2px solid rgba(255, 255, 255, 0.6);  /* Grijs-witte rand */
+  background: rgba(25, 25, 25, 0.7); 
+  border: 2px solid rgba(255, 255, 255, 0.6);  
   border-radius: 10px;
   padding: 20px;
   width: 300px;
@@ -70,7 +70,7 @@ header.header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #e0e0e0; /* Lichte grijze tekstkleur */
+  color: #e0e0e0; 
   font-size: 1.2rem;
   position: relative;
   cursor: pointer;
@@ -80,29 +80,29 @@ header.header {
 
 .menu-item:hover {
   transform: scale(1.075);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6); /* Witte gloed */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6); 
 }
 
 .menu-item h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8); /* Witte kleur voor de titel */
+  color: rgba(255, 255, 255, 0.8); 
 }
 
 .menu-item p {
   margin: 10px 0 0;
   font-size: 0.9rem;
-  color: rgba(200, 200, 200, 0.8); /* Lichte grijze tekstkleur */
+  color: rgba(200, 200, 200, 0.8);
 }
 
-/* Decoratieve lijnen */
+
 .menu-item .decor {
   position: absolute;
   top: -10%;
   left: -10%;
   width: 120%;
   height: 120%;
-  border: 2px solid rgba(255, 255, 255, 0.4); /* Lichte grijze rand */
+  border: 2px solid rgba(255, 255, 255, 0.4); 
   border-radius: 15px;
   transform: rotate(0deg);
   animation: rotate-decor 6s linear infinite;
@@ -118,7 +118,7 @@ header.header {
   }
 }
 
-/* Statische ruimteachtergrond */
+
 .background-animation {
   position: absolute;
   top: 0;
@@ -127,12 +127,12 @@ header.header {
   height: 100%;
   background: url('../images/space.jpg') no-repeat center center/cover;
   z-index: -3;
-  filter: brightness(0.5); /* Donkere helderheid voor een mysterieus effect */
-  transform: translate3d(0, 0, 0); /* Dit maakt het mogelijk om de achtergrond te bewegen met de muis */
+  filter: brightness(0.5); 
+  transform: translate3d(0, 0, 0); 
   transition: transform 0.1s ease-out;
 }
 
-/* Loading Indicator */
+
 .loading-indicator {
   position: fixed;
   bottom: 20px;
@@ -157,7 +157,7 @@ header.header {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #b0b0b0, #707070); /* Grijs met lichte metallic tint */
+  background: radial-gradient(circle at 30% 30%, #b0b0b0, #707070); 
   box-shadow: 0 0 10px rgba(180, 180, 180, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.3);
   position: relative;
   animation: spin 2s linear infinite;
@@ -191,4 +191,6 @@ header.header {
   to {
     transform: rotate(-360deg);
   }
+
+  
 }
