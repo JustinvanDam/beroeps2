@@ -8,57 +8,38 @@
   <script defer src="js/script.js"></script>
 </head>
 <body>
- 
+  <header class="header">
+    <p>Restaurant Menu</p>
+  </header>
 
-  <div class="grid-overlay"></div>
 
-  <div class="menu-container">
-    <div class="menu-item">
-      <div class="decor"></div>
+
+  <div class="menu-container-vertical">
+    <div class="menu-category" onclick="navigateTo('menu/ontbijt.html')">
       <h3>☕ Ontbijt</h3>
       <p>Begin je dag met een heerlijk ontbijt</p>
-      <ul class="menu-list">
-        <li>Roggebrood met kaas</li>
-        <li>Scrambled eggs</li>
-        <li>Yoghurt met granola</li>
-        <li>Verse fruitsalade</li>
-      </ul>
     </div>
-    <div class="menu-item">
-      <div class="decor"></div>
+    <div class="menu-category" onclick="navigateTo('menu/lunch.html')">
       <h3>🥗 Lunch</h3>
       <p>Geniet van een lekkere lunch</p>
-      <ul class="menu-list">
-        <li>Caesarsalade</li>
-        <li>Gegrilde kip wrap</li>
-        <li>Tomatensoep</li>
-        <li>Ciabatta met mozzarella</li>
-      </ul>
     </div>
-    <div class="menu-item">
-      <div class="decor"></div>
+    <div class="menu-category" onclick="navigateTo('menu/diner.html')">
       <h3>🍽️ Diner</h3>
       <p>Beleef een culinair avondmaal</p>
-      <ul class="menu-list">
-        <li>Risotto met truffel</li>
-        <li>Gegrilde zalm</li>
-        <li>Entrecote met kruidenboter</li>
-        <li>Gegrilde groenten</li>
-      </ul>
     </div>
-    <div class="menu-item">
-      <div class="decor"></div>
+    <div class="menu-category" onclick="navigateTo('menu/dessert.html')">
       <h3>🍰 Dessert</h3>
       <p>Sluit af met een zoete traktatie</p>
-      <ul class="menu-list">
-        <li>Chocolademousse</li>
-        <li>Cheesecake</li>
-        <li>Crème brûlée</li>
-        <li>Verse aardbeien</li>
-      </ul>
     </div>
   </div>
 
   <div class="background-animation"></div>
+  <div class="grid-overlay"></div>
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>

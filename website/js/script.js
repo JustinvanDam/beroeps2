@@ -19,7 +19,7 @@ function navigateTo(page) {
 
   setTimeout(() => {
     window.location.href = page;
-  }, 2000);
+  }, 1000);
   function navigateTo(page) {
     window.location.href = page;
   }

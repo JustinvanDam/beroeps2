@@ -62,7 +62,7 @@ header.header {
   background: rgba(25, 25, 25, 0.7); 
   border: 2px solid rgba(255, 255, 255, 0.6);  
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   width: 300px;
   height: 200px;
   display: flex;
@@ -108,6 +108,93 @@ header.header {
   animation: rotate-decor 6s linear infinite;
   pointer-events: none;
 }
+.menu-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 30px;
+}
+
+.menu-category {
+  background: rgba(25, 25, 25, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  padding: 20px 40px;
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  width: 70%;
+  max-width: 600px;
+}
+
+.menu-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+.menu-category h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.menu-category p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: rgba(200, 200, 200, 0.9);
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+  padding: 20px;
+}
+
+.info-item {
+  background: rgba(25, 25, 25, 0.7); 
+  border: 2px solid rgba(255, 255, 255, 0.6);  
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #e0e0e0; 
+  font-size: 1.2rem;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  overflow: hidden;
+}
+
+.info-item:hover {
+  transform: scale(1.075);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6); 
+}
+
+.info-item h3 {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8); 
+  margin: 0;
+}
+
+.info-item p {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  color: rgba(200, 200, 200, 0.8);
+}
+
 
 @keyframes rotate-decor {
   from {
@@ -160,7 +247,7 @@ header.header {
   background: radial-gradient(circle at 30% 30%, #b0b0b0, #707070); 
   box-shadow: 0 0 10px rgba(180, 180, 180, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.3);
   position: relative;
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 .planet::before {

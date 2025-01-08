@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informatie</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <p>Informatie - Space Odyssey</p>
+  </header>
+
+
+  <div class="info-container">
+    <div class="info-item" onclick="navigateTo('')">
+      <h3>🚀 Schip</h3>
+      <p>Lees alles over het ruimteschip</p>
+    </div>
+    <div class="info-item" onclick="navigateTo('informatie/vlucht.html')">
+      <h3>🛫 Vlucht</h3>
+      <p>Ontdek de details van je vlucht</p>
+    </div>
+    <div class="info-item" onclick="navigateTo('informatie/holodeck.html')">
+      <h3>🎮 Holodeck</h3>
+      <p>Verken de mogelijkheden van het holodeck</p>
+    </div>
+    <div class="info-item" onclick="navigateTo('informatie/bibliotheek.html')">
+      <h3>📚 Bibliotheek</h3>
+      <p>Raadpleeg onze uitgebreide digitale bibliotheek</p>
+    </div>
+  </div>
+
+
+  <div class="background-animation"></div>
+
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+    
+  </script>
+</body>
+</html>
