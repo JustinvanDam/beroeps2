@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruimteschip Informatie</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/script.js"></script>
+  <style>
+    .menu-category {
+      padding: 15px 25px; /* Kleiner maken */
+      width: 90%; /* Minder breed */
+      max-width: 500px;
+    }
+
+    .menu-category h3 {
+      font-size: 1.4rem; /* Kleinere koptekst */
+    }
+
+    .menu-category p {
+      font-size: 0.9rem; /* Kleinere paragraaf */
+      line-height: 1.4; /* Compactere tekst */
+    }
+
+    .info-item img {
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 8px;
+    }
+
+    .webcam-container {
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 15px; /* Ruimte tussen beelden */
+      justify-content: center;
+    }
+
+    .webcam-item {
+      width: 45%; /* Twee beelden naast elkaar */
+      max-width: 200px;
+      text-align: center;
+    }
+
+    .webcam-item img {
+      width: 100%; 
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- Hoofdcontainer -->
+  <div class="menu-container-vertical">
+
+     <!-- Sectie: Fitness en wellness -->
+    <div class="menu-category">
+      <h3>💪 Fitness & Wellness</h3>
+      <p>
+        Blijf gezond en energiek in onze ultramoderne wellness-ruimte. <br>
+        <strong>Faciliteiten:</strong><br>
+        - Zero-gravity gym<br>
+        - Sauna en jacuzzi<br>
+        - Ontspanningszones op dek 3
+      </p>
+    </div>
+
+    <!-- Sectie: Webcambeelden -->
+    <div class="menu-category">
+      <h3>🛰️ Live Webcambeelden</h3>
+      <div class="webcam-container">
+        <div class="webcam-item">
+          <h4>Voorkant</h4>
+          <img src="../images/schip.jpg" alt="Webcam voorkant">
+        </div>
+        <div class="webcam-item">
+          <h4>Technische Ruimte</h4>
+          <img src="../images/engine.jpg" alt="Webcam technische ruimte">
+        </div>
+        <div class="webcam-item">
+          <h4>Panorama</h4>
+          <img src="../images/panorama.jpg" alt="Webcam panorama">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="background-animation"></div>
+</body>
+</html>

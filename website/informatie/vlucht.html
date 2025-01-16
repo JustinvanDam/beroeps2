@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vluchtinformatie</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/script.js"></script>
+  <style>
+    .flight-info-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Twee kolommen */
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .flight-info-container h2 {
+      grid-column: 1 / -1; /* Koptekst over beide kolommen */
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .flight-info-section {
+      background: rgba(25, 25, 25, 0.8);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .flight-info-section:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    .flight-info-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .flight-info-section p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: rgba(200, 200, 200, 0.9);
+    }
+
+    .flight-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    .important-info {
+      grid-column: 1 / -1; /* Brede sectie over beide kolommen */
+      background: rgba(30, 30, 30, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .important-info h3 {
+      font-size: 1.8rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .important-info p {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: rgba(200, 200, 200, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <p>Vluchtinformatie - Space Odyssey</p>
+  </header>
+
+  <div class="flight-info-container">
+    <h2>🚀 Details Over De Vlucht</h2>
+
+    <!-- Sectie 1 -->
+    <div class="flight-info-section">
+      <h3>Bestemming</h3>
+      <p>
+        Onze reis gaat naar <strong>Mars</strong>, een planeet in het zonnenstelsel.
+        Het is een van de veiligste en meest populaire bestemmingen in de ruimte.
+      </p>
+    </div>
+
+    <!-- Sectie 2 -->
+    <div class="flight-info-section">
+      <h3>Reisduur</h3>
+      <p>
+        We zitten nu op <strong>68 van de 181 dagen.</strong><br/>
+        De totale reistijd bedraagt <strong>6 maanden</strong>. Geniet van een comfortabel verblijf met activiteiten, entertainment en luxe voorzieningen terwijl we door de ruimte reizen.
+      </p>
+    </div>
+
+    <!-- Sectie 3 -->
+    <div class="flight-info-section">
+      <h3>Hoogtepunten Aan Boord</h3>
+      <p>
+        - Zero-gravity ervaringen<br>
+        - Luxueuze cabines met panoramische uitzichten<br>
+        - Een breed scala aan culinaire opties<br>
+        - Fitness- en wellness-faciliteiten
+      </p>
+    </div>
+
+    <!-- Sectie 4 -->
+    <div class="flight-info-section">
+      <h3>Hoogtepunten Aan Boord</h3>
+      <p>
+        - Zero-gravity ervaringen<br>
+        - Luxueuze cabines met panoramische uitzichten<br>
+        - Een breed scala aan culinaire opties<br>
+        - Fitness- en wellness-faciliteiten
+      </p>
+    </div>
+
+    <!-- Belangrijke Informatie -->
+    <div class="important-info">
+      <h3>🌌 Afgelegde Afstand</h3>
+      <p>
+        We hebben nu <strong>4458 lichtjaren</strong> afgelegd. <br/>
+        Tijdens deze reis legt het schip een indrukwekkende afstand van <strong>12.000 lichtjaren</strong> af. Dit is mogelijk dankzij onze geavanceerde hyperlichttechnologie.
+      </p>
+    </div>
+  </div>
+
+  <div class="background-animation"></div>
+</body>
+</html>
