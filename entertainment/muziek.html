@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muziek</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/script.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: url('../images/space.jpg') no-repeat center center/cover;
+      color: #e0e0e0;
+    }
+
+    .music-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 20px;
+      max-width: 1200px; 
+      width: 90%;
+    }
+
+    .music-item {
+      background: rgba(25, 25, 25, 0.8);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      color: #e0e0e0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .music-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    .music-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .music-item audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .music-item p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: rgba(200, 200, 200, 0.9);
+    }
+
+    header.header {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #e0e0e0;
+      font-size: 1.2rem;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <p>Muziek - Space Odyssey</p>
+  </header>
+
+  <div class="music-container">
+    
+    <div class="music-item">
+      <h3>Playlist 1: Galactic Beats</h3>
+      <audio controls>
+        <source src="../audio/galactic-beats.mp3" type="audio/mp3">
+        Je browser ondersteunt geen audio. Download de muziek om deze te beluisteren.
+      </audio>
+      <p>Een verzameling kosmische beats om te ontspannen.</p>
+    </div>
+
+    <div class="music-item">
+      <h3>Playlist 2: Cosmic Chill</h3>
+      <audio controls>
+        <source src="../audio/cosmic-chill.mp3" type="audio/mp3">
+        Je browser ondersteunt geen audio. Download de muziek om deze te beluisteren.
+      </audio>
+      <p>Rustgevende melodieën geïnspireerd door de sterren.</p>
+    </div>
+
+
+    <div class="music-item">
+      <h3>Playlist 3: Astral Tunes</h3>
+      <audio controls>
+        <source src="../audio/astral-tunes.mp3" type="audio/mp3">
+        Je browser ondersteunt geen audio. Download de muziek om deze te beluisteren.
+      </audio>
+      <p>Epische soundtracks voor je ruimtereis.</p>
+    </div>
+
+   
+    <div class="music-item">
+      <h3>Playlist 4: Interstellar Vibes</h3>
+      <audio controls>
+        <source src="../audio/interstellar-vibes.mp3" type="audio/mp3">
+        Je browser ondersteunt geen audio. Download de muziek om deze te beluisteren.
+      </audio>
+      <p>Ritmische beats die de eindeloze ruimte vieren.</p>
+    </div>
+  </div>
+</body>
+</html>

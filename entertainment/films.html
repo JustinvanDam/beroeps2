@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Films</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/script.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: url('../images/space.jpg') no-repeat center center/cover;
+      color: #e0e0e0;
+    }
+
+    .film-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 20px;
+      max-width: 1200px;
+      width: 90%; 
+    }
+
+    .film-item {
+      background: rgba(25, 25, 25, 0.8);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      color: #e0e0e0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .film-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    .film-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .film-item video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      margin-top: 10px;
+    }
+
+    .film-item p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: rgba(200, 200, 200, 0.9);
+    }
+
+    header.header {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #e0e0e0;
+      font-size: 1.2rem;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <p>Films - Space Odyssey</p>
+  </header>
+
+  <div class="film-container">
+   
+    <div class="film-item">
+      <h3>Film 1: Galaxy Adventures</h3>
+      <video controls>
+        <source src="../videos/galaxy-adventures.mp4" type="video/mp4">
+        Je browser ondersteunt geen video. Download de film om deze te bekijken.
+      </video>
+      <p>Verken een epische reis door de sterrenstelsels in deze avontuurlijke film.</p>
+    </div>
+
+    <!-- Film 2 -->
+    <div class="film-item">
+      <h3>Film 2: Cosmic Odyssey</h3>
+      <video controls>
+        <source src="../videos/cosmic-odyssey.mp4" type="video/mp4">
+        Je browser ondersteunt geen video. Download de film om deze te bekijken.
+      </video>
+      <p>Een spannende ontdekkingstocht naar de randen van het universum.</p>
+    </div>
+
+    <div class="film-item">
+      <h3>Film 3: Stardust Chronicles</h3>
+      <video controls>
+        <source src="../videos/stardust-chronicles.mp4" type="video/mp4">
+        Je browser ondersteunt geen video. Download de film om deze te bekijken.
+      </video>
+      <p>Laat je meeslepen in een meeslepende sci-fi saga vol actie en mysterie.</p>
+    </div>
+
+
+    <div class="film-item">
+      <h3>Film 4: Beyond the Nebula</h3>
+      <video controls>
+        <source src="../videos/beyond-the-nebula.mp4" type="video/mp4">
+        Je browser ondersteunt geen video. Download de film om deze te bekijken.
+      </video>
+      <p>Een inspirerende reis naar de verborgen werelden voorbij de nevels.</p>
+    </div>
+  </div>
+</body>
+</html>
